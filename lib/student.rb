@@ -63,4 +63,11 @@ class Student
     return out
   end 
       
+    def update
+    sql = <<-SQL
+      UPDATE INTO students (name, grade) 
+      VALUES (?, ?)
+    SQL
+
+    end 
 end
