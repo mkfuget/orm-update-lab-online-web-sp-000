@@ -43,13 +43,14 @@ class Student
   end 
   
   def self.create(name, grade)
-      out = self.new(name, grade)
+      out = new(name, grade)
       out.save
       return out
   end 
   
   def self.new_from_db(row)
     self.new(row[1], row[2])
+  end
     
   def self.find_by_name(name)
     sql = <<-SQL
