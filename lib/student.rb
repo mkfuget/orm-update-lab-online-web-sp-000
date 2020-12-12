@@ -58,8 +58,8 @@ class Student
       SELECT * FROM students WHERE name  = ?
     SQL
  
-    new_from_db(DB[:conn].execute(sql, name))
-
-    end 
+    out = new_from_db(DB[:conn].execute(sql, name))
+    return out
+  end 
       
 end
